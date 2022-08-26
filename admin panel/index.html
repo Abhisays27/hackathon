@@ -1,0 +1,90 @@
+<html>
+<head>
+<title>
+Login page
+</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+	<div class="all">
+<h1 style="font-family:sans-serif;background-color: aqua;height: 55px;width:500px;text-align: center;padding-top:15px;margin-top:200px;font-size:30px;color:black;">
+Please Login!
+</h1>
+<form name="Signup" class="container" type="email" id="mail"><br><br>
+	<b>Email:</b><br>
+<input type="text" name="userid" placeholder=" Username"><br><br>
+<b>Password:</b><br>
+<input type="password" name="pswrd" placeholder=" Password" id="pss"><br><br>
+<div style="color: rgb(255, 255, 255);">
+<input type="checkbox" name="">Remember Me
+</div>
+<br><br>
+<input type="button" onclick="check(this.form)" value="LOG IN"/>
+<input type="reset" value="RESET"/><br><br>
+<a href="C:\Users\hp\Desktop\HTML\signup.html"><input style="margin-left: 85px;" type="button"  value="SIGN UP"/></a>
+</form>
+<script language="javascript">
+
+function check(form)//function to check userid & password
+{
+ if(form.userid.value == "Username" && form.pswrd.value == "Password")
+  {
+    window.open('https://codepen.io/skishan781/full/mLejya/');//Staff
+    alert('Logged in !');
+  }
+ else
+ {
+   if(form.userid.value == "Password" && form.pswrd.value == "Username"){
+   		window.open('#');//student
+   		alert('Logged in !');
+   }
+   else{
+   	alert("Error Password or Username")//displays error message
+   }
+ }
+}
+</script>
+</div>
+</body>
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+    import { getDatabase } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBI-BWdEHrWxcNPKcvUzHwLv6GdQCzYbe8",
+      authDomain: "login-77508.firebaseapp.com",
+      projectId: "login-77508",
+      storageBucket: "login-77508.appspot.com",
+      messagingSenderId: "358691072902",
+      appId: "1:358691072902:web:4091a8c9783b9b1a181a07"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+    container.addEventListner('click',(e)=>{
+        var email = document.getElementById('mail').value;
+        var password = document.getElementById('pss').value;
+        
+        createUserWithEmailAndPassword(auth, email, password)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    // ..
+  });
+
+    })
+  </script>
+</html>

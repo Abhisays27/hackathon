@@ -1,0 +1,55 @@
+body{
+    background: url('https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&h=650&w=940 1x, https://images.pexels.com/photos/256541/pexels-photo-256541.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940 2x');
+    height: 100%;
+}
+.container{
+    padding: 10px;
+    width: 350px;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 70px;
+
+}
+input[type="text"],input[type="password"]{
+    border: 0px;
+    width: 335px;
+    height: 40px;
+    font-size: 18px;
+padding-left:15px;
+background-color:lightgrey;
+opacity:0.8;
+border-radius:1em;
+transition-duration:0.4s;
+}
+input[type="text"]:hover,input[type="password"]:hover{
+background-color:#ffffff;
+}
+input[type="button"],input[type="reset"]{
+    border:0px;
+background-color: red;
+    width: 172px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+border-radius:1em;
+transition-duration:0.4s;
+}
+input[type="button"]:hover,input[type="reset"]:hover{
+background-color:green;
+opacity:.7;
+}
+input[type="button"]:active,input[type="reset"]:active{
+background-color:blue;
+}
+b{
+    font-weight: 700;
+    font-size: 19px;
+    font-family: sans-serif;
+    color: white;
+}
+.all{
+    margin-left:130px;
+    background-color: black;
+    width:500px;
+}
